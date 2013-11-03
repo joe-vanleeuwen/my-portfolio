@@ -1,0 +1,42 @@
+body {
+    margin: 0;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background: rgb(152, 210, 233);
+}
+
+.wrapper {
+    width: 960px;
+    height: 900px;
+    margin: 0 auto;
+
+    h1 {
+        color: #FFF;
+        margin-bottom: 30px;
+        text-align: center;
+        font-size: 100px;   
+        font-family: 'Nixie One', cursive;    
+    }
+
+    hr {
+        margin: 5px;
+        border: none;
+        border-top: 1px solid #FFF;
+    }
+
+    p {
+        color: #FFF;
+        padding: 20px 40px;
+        border-radius: 5px;
+        text-shadow: 0 1px #00B5C5;
+        font-family: 'Nixie One', cursive;
+        font-size: 22px;
+        line-height: 44px;
+        box-shadow: inset 0px 0px 90px 2px #85C4DF;
+
+        span {
+            border-bottom: 2px solid #FFF;
+            box-shadow: 0 1px #00B5C5;
+        }
+    }
+}
+
