@@ -10,7 +10,7 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width">
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-        <link rel="stylesheet" href="styles/d1ee1b6b.main.css">
+        <link rel="stylesheet" href="styles/0a1776b1.main.css">
     </head>
     <body>
         <!--[if lt IE 10]>
@@ -19,9 +19,12 @@
 
 
         <div class="wrapper">
+
             <h1>in development</h1>
+
             <hr>
             <hr>
+
             <p>
                 Hey, I'm Joe VanLeeuwen. 
                 I'm in development. I like it. I do it. But most importantly, <span><strong>I</strong></span> am in development. 
@@ -29,30 +32,68 @@
 
             <span class="v">V</span>
             <span class="v">V</span>
+
             <h3>Recent History</h3>
+
+            <div class="description"></div>
+
             <div class="hide-overflow">
-                <div class="slider">
-                    <div class="showcase">
-                        <p>
-                            This just looks nice. 
-                            
-                            <a href="http://joe-vanleeuwen.github.io/checkerboard">http://joe-vanleeuwen.github.io/checkerboard</a>
-                        </p>
-                        <img class="squares" src="images/70570797.to-do.png">
-                    </div><div class="showcase">
-                        <p>
-                            This just looks nice. 
-                            
-                            <a href="http://joe-vanleeuwen.github.io/checkerboard">http://joe-vanleeuwen.github.io/checkerboard</a>
-                        </p>
-                        <img class="squares" src="images/1b42907d.some-squares.png">
-                    </div>
-                </div>
+                <div class="slider"></div>
             </div>
+
+            <div class="selector">
+                <div class="mini-slider"></div>
+            </div>
+
+            <span class="v">V</span>
+            <span class="v">V</span>
+
+            <h3>More About Me</h3>
+
+            <p>
+                I recently graduated from a 3 month <a href="http://theironyard.com/education/academy/front-end-engineering/" target="_blank">Front End Engineering course</a> at <a href="http://theironyard.com/" target="_blank">The Iron Yard</a>. The work that you see here represents long hours plugging away at assignments for the course. I titled my final project 
+                <a href="http://joe-vanleeuwen.github.io/chess.js" target="_blank">chess.js</a> and I am most satisfied with this endeavor.
+                <br>
+                <br>
+                Besides hacking away at something that is way over my head, I also 
+                enjoy running, especially trail running. My last big race was the 
+                <a href="http://belmonteraces.com/" target="_blank">Bel Monte 50 Miler</a> back in April of '13. I hope to run a 100 miler some day!
+            </p>
+
         </div>
 
+        <!-- info template for work description -->
 
-        <script src="scripts/1137e1f5.vendor.js"></script>
+        <script type="text/template" id="description">
+
+            <p>
+                <%= project.info %>
+                </br>
+                <a href= <%= project.link %> > <%= project.link %> </a>
+            </p>
+
+        </script>
+
+        <!-- image template for large preview -->
+
+        <script type="text/template" id="image">
+
+            <div class="showcase">
+                <img src= <%= project.image %> >
+            </div>
+
+        </script>
+
+        <!-- thumbnail template for work selection -->
+
+        <script type="text/template" id="selector">
+
+                <img src= <%= project.image %> >
+
+        </script>
+
+
+        <script src="scripts/ff5cede5.vendor.js"></script>
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>
@@ -64,8 +105,8 @@
             ga('create','UA-XXXXX-X');ga('send','pageview');
         </script>
 
-        <script src="scripts/d41d8cd9.main.js"></script>
+        <script src="scripts/7bc593f6.main.js"></script>
 
-        <script src="scripts/3431b5a9.coffee.js"></script>
+        <script src="scripts/d41d8cd9.coffee.js"></script>
 </body>
 </html>
