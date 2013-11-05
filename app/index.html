@@ -22,7 +22,7 @@
 
 
         <div class="wrapper">
-            
+
             <h1>in development</h1>
 
             <hr>
@@ -41,10 +41,31 @@
             <div class="description"></div>
 
             <div class="hide-overflow">
-                <div class="slider">
+                <div class="slider"></div>
             </div>
 
+            <div class="selector">
+                <div class="mini-slider"></div>
+            </div>
+
+            <span class="v">V</span>
+            <span class="v">V</span>
+
+            <h3>More About Me</h3>
+
+            <p>
+                I recently graduated from a 3 month <a href="http://theironyard.com/education/academy/front-end-engineering/" target="_blank">Front End Engineering course</a> at <a href="http://theironyard.com/" target="_blank">The Iron Yard</a>. The work that you see here represents long hours plugging away at assignments for the course. I titled my final project 
+                <a href="http://joe-vanleeuwen.github.io/chess.js" target="_blank">chess.js</a> and I am most satisfied with this endeavor.
+                <br>
+                <br>
+                Besides hacking away at something that is way over my head, I also 
+                enjoy running, especially trail running. My last big race was the 
+                <a href="http://belmonteraces.com/" target="_blank">Bel Monte 50 Miler</a> back in April of '13. I hope to run a 100 miler some day!
+            </p>
+
         </div>
+
+        <!-- info template for work description -->
 
         <script type="text/template" id="description">
 
@@ -56,6 +77,8 @@
 
         </script>
 
+        <!-- image template for large preview -->
+
         <script type="text/template" id="image">
 
             <div class="showcase">
@@ -64,11 +87,20 @@
 
         </script>
 
+        <!-- thumbnail template for work selection -->
+
+        <script type="text/template" id="selector">
+
+                <img src= <%= project.image %> >
+
+        </script>
+
 
         <!-- build:js scripts/vendor.js -->
         <!-- bower:js -->
         <script src="bower_components/jquery/jquery.js"></script>
         <script src="bower_components/underscore/underscore.js"></script>
+        <script src="bower_components/backbone/backbone.js"></script>
         <!-- endbower -->
         <!-- endbuild -->
 
@@ -83,6 +115,7 @@
         </script>
 
         <!-- build:js scripts/main.js -->
+        <script src="scripts/views.js"></script>
         <script src="scripts/main.js"></script>
         <!-- endbuild -->
 
