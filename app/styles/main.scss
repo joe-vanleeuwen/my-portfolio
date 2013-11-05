@@ -70,23 +70,39 @@ a {
     }
 }
 
+.description {
+    width: 800px;
+    margin: 0 auto;
+}
+
 .hide-overflow {
     width: 800px;
+    height: 710px;
     margin: 0 auto 100px;
     overflow: hidden;
+    position: relative;
 }
 
 .slider {
-    width: 1600px;
+    width: 5000px;
+    position: absolute;
+    left: 0px;
 
     .showcase {
         width: 800px;
+        margin-left: -4px;
         display: inline-block;
+
+        -webkit-transition: all .3s ease;
 
         img {
             width: 100%;
         }
-    }  
+    }
+
+    :first-child {
+        margin-left: 0;
+    }
 }
 
 

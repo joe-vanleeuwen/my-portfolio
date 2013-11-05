@@ -22,9 +22,12 @@
 
 
         <div class="wrapper">
+            
             <h1>in development</h1>
+
             <hr>
             <hr>
+
             <p>
                 Hey, I'm Joe VanLeeuwen. </br>
                 I'm in development. I like it. I do it. But most importantly, <span><strong>I</strong></span> am in development. 
@@ -32,34 +35,40 @@
 
             <span class="v">V</span>
             <span class="v">V</span>
+
             <h3>Recent History</h3>
+
+            <div class="description"></div>
+
             <div class="hide-overflow">
                 <div class="slider">
-                    <div class="showcase">
-                        <p>
-                            This just looks nice. 
-                            </br>
-                            <a href="http://joe-vanleeuwen.github.io/checkerboard">http://joe-vanleeuwen.github.io/checkerboard</a>
-                        </p>
-                        <img class="squares" src="images/to-do.png">
-                    </div
-
-                    ><div class="showcase">
-                        <p>
-                            This just looks nice. 
-                            </br>
-                            <a href="http://joe-vanleeuwen.github.io/checkerboard">http://joe-vanleeuwen.github.io/checkerboard</a>
-                        </p>
-                        <img class="squares" src="images/some-squares.png">
-                    </div>
-                </div>
             </div>
+
         </div>
+
+        <script type="text/template" id="description">
+
+            <p>
+                <%= project.info %>
+                </br>
+                <a href= <%= project.link %> > <%= project.link %> </a>
+            </p>
+
+        </script>
+
+        <script type="text/template" id="image">
+
+            <div class="showcase">
+                <img src= <%= project.image %> >
+            </div>
+
+        </script>
 
 
         <!-- build:js scripts/vendor.js -->
         <!-- bower:js -->
         <script src="bower_components/jquery/jquery.js"></script>
+        <script src="bower_components/underscore/underscore.js"></script>
         <!-- endbower -->
         <!-- endbuild -->
 
