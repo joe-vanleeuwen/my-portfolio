@@ -1,6 +1,14 @@
 var count = 0;
+var timeOut;
+
 
 var projectList = [
+
+	{
+		info:  'A 3-week project implementing the rules of chess.',
+		link:  'http://joe-vanleeuwen.github.io/chess.js',
+		image: '../images/chess.png'
+	},
 
 	{
 		info:  'This just looks nice.',
@@ -21,15 +29,11 @@ var projectList = [
 		info:  'A group project chat program.',
 		link:  'http://joe-vanleeuwen.github.io/buzzME',
 		image: '../images/buzz-me.png'
-	},
-
-	// first and last are the same for sliding purposes
-	{
-		info:  'This just looks nice.',
-		link:  'http://joe-vanleeuwen.github.io/checkerboard',
-		image: '../images/some-squares.png'
 	}
 ]
+
+// first and last are the same for sliding purposes
+projectList.push(projectList[0])
 
 var infoTemplate  =  _.template($('#description').text());
 var imageTemplate = _.template($('#image').text());
@@ -47,7 +51,7 @@ projectList.forEach(function(project, index) {
 })
 
 var interval = function() {
-
+		
 	if (count === (projectList.length - 1)) {
 		count = 0;
 		$('.slider').css({'left': '0px'})
@@ -61,11 +65,11 @@ var interval = function() {
 	count++;
 
 	$('.description').html('');
-	$('.description').append(infoTemplate({project: projectList[count]}));
+	$('.description').append(infoTemplate({project: projectList[count]}));	
+
 }
 
-var sliderInterval = setInterval(interval, 8000)
-// setInterval(interval, 1000)
+var sliderInterval = setInterval(interval, 5000)
 
 
 

@@ -22,10 +22,19 @@ ThumbnailView = Backbone.View.extend({
 	display: function() {
 		count = this.options.index
 
+		$('.description').html('');
+		$('.description').append(infoTemplate({project: this.options}));
+
 		var slideDistance = '-' + (this.options.index * 800).toString() + 'px';
 
 		$('.slider').css({'left': slideDistance});
+
 		clearInterval(sliderInterval);
-		sliderInterval = setInterval(interval, 8000)
+		clearInterval(timeOut)
+
+		timeOut = setTimeout(function() {
+			sliderInterval = setInterval(interval, 5000)
+		}, 4000)
 	}
 })
+
