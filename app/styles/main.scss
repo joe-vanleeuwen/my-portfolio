@@ -1,9 +1,8 @@
 body {
     margin: 0;
     color: #FFF;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     background: rgb(152, 210, 233);
-    /*background: url('../images/some-squares.png')*/
+    font-family: 'Nixie One', cursive;  
 }
 
 * {
@@ -13,9 +12,12 @@ body {
 a {
     color: #FFF;
     text-decoration: none;
+    border-bottom: 1px solid #FFF;
+    box-shadow: 0 1px rgba(0, 181, 197, 0.4);
 
     &:hover {
         border-bottom: 2px solid #FFF;
+        box-shadow: none;
     }
 }
 
@@ -53,6 +55,7 @@ a {
     }
 
     .v {
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
         font-size: 24px;
         font-weight: lighter;
         margin-bottom: -14px;
@@ -111,7 +114,6 @@ a {
     overflow: auto;
 
     .mini-slider {
-        // width: 1312px;
         width: 1305px;
 
         .thumbnail {
@@ -127,6 +129,27 @@ a {
         }
     }
 
+}
+
+.contact {
+    width: 300px;
+    color: rgb(133, 196, 223);
+    padding: 20px;
+    margin: 0 auto 60px;
+    border: 1px solid #FFF;
+    font-size: 24px;
+    text-align: center;
+
+    a {
+        color: #FFF;
+        font-weight: 200;
+        border: none;
+        box-shadow: none;
+
+        &:hover {
+            border-bottom: 2px solid #FFF;
+        }
+    }
 }
 
 
