@@ -4,7 +4,7 @@ var timeOut;
 var projectList = [
 
 	{
-		info:      'A 3-week project implementing the rules of chess.',
+		info:      'A project implementing the rules of chess.',
 		siteLink:  'http://joe-vanleeuwen.github.io/chess.js',
 		gitLink:   'https://github.com/joe-vanleeuwen/chess.js',
 		image:     '../images/chess.png'
@@ -36,36 +36,6 @@ var projectList = [
 	}
 ]
 
-// var projectList = [
-
-// 	{
-// 		info:  'A 3-week project implementing the rules of chess.',
-// 		link:  'http://joe-vanleeuwen.github.io/chess.js',
-// 		image: '../images/chess.png'
-// 	},
-
-// 	{
-// 		info:  'This just looks nice.',
-// 		link:  'http://joe-vanleeuwen.github.io/checkerboard',
-// 		image: '../images/some-squares.png'
-// 	},
-// 	{
-// 		info:  'This is a simple to-do list using Parse.',
-// 		link:  'http://joe-vanleeuwen.github.io/to-do-list',
-// 		image: '../images/to-do.png'
-// 	},
-// 	{
-// 		info:  'My first markup practice.',
-// 		link:  'http://joe-vanleeuwen.github.io/mobber',
-// 		image: '../images/mobber.png'
-// 	},	
-// 	{
-// 		info:  'A group project chat program.',
-// 		link:  'http://joe-vanleeuwen.github.io/buzzME',
-// 		image: '../images/buzz-me.png'
-// 	}
-// ]
-
 // first and last are the same for sliding purposes
 projectList.push(projectList[0])
 
@@ -73,6 +43,7 @@ var infoTemplate  =  _.template($('#description').text());
 var imageTemplate = _.template($('#image').text());
 
 $('.description').append(infoTemplate({project: projectList[0]}));
+$('.github').attr('href', projectList[0].gitLink);
 
 projectList.forEach(function(project, index) {
 
@@ -92,7 +63,7 @@ var interval = function() {
 	}
 
 	var left = $('.slider').css('left');
-	left     = parseInt(left.slice(0, -2)) - 800;
+	left     = parseInt(left.slice(0, -2)) - $('.showcase').width();
 
 	$('.slider').animate({'left': left}, 200);
 
@@ -100,6 +71,8 @@ var interval = function() {
 
 	$('.description').html('');
 	$('.description').append(infoTemplate({project: projectList[count]}));	
+
+	$('.github').attr('href', projectList[count].gitLink);
 
 }
 

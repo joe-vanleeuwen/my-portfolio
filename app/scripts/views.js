@@ -25,7 +25,9 @@ ThumbnailView = Backbone.View.extend({
 		$('.description').html('');
 		$('.description').append(infoTemplate({project: this.options}));
 
-		var slideDistance = '-' + (this.options.index * 800).toString() + 'px';
+		$('.github').attr('href', this.options.gitLink);
+
+		var slideDistance = '-' + (this.options.index * $('.showcase').width()).toString() + 'px';
 
 		$('.slider').css({'left': slideDistance});
 
